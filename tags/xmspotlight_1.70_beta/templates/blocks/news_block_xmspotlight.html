@@ -1,0 +1,83 @@
+<table border="0" cellpadding="5" cellspacing="5" width="100%" >
+<{foreach item=news from=$block.stories}> 
+<tr>
+	<td style="font-weight: bold; font-size: 14px;"><{$news.newstitle}></td>
+</tr>
+<tr>
+<!--	<td style="font-style: italic; border-bottom:1px solid #999999;" align="right">Posted By: <{$news.poster}> On: <{$news.posttime}></td>
+</tr>
+<tr>
+	<td align="right"><{$news.print}>&nbsp;<{$news.makepdf}>&nbsp;<{$news.send}></td> -->
+	<td style="font-style: italic; border-bottom:1px solid #999999;" align="right"><{$_XM_SPOTLIGHT_POSTEDBY}> <{$news.poster}> On: <{$news.posttime}> &nbsp;<{$news.print}>&nbsp;<{$news.makepdf}>&nbsp;</td>
+</tr>
+<tr>
+	<td><{$news.image}><{$news.hometext}></td>
+</tr>
+<tr>
+	<td style="padding: 2px; border: 1px solid #999999; background-color: transparent;" align="right"><{$news.readmore}> | <{$news.comments}> | <{$news.write}>&nbsp;</td>
+</tr>
+<{/foreach}>
+<tr><td>
+<table border="0" cellpadding="2" cellspacing="2">
+<tr>
+<td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold"><{$block.category1}></td><td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold;"><{$block.category2}></td>
+</tr>
+<tr>
+<td><{$block.image1}><ul><{foreach item=news2 from=$block.stories2}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news2.storyid}>"><{$news2.newstitle}></a> <{$news2.posttime}><br><br></li><{/foreach}></ul></td>
+<td><{$block.image2}><ul><{foreach item=news3 from=$block.stories3}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news3.storyid}>"><{$news3.newstitle}></a> <{$news3.posttime}><br><br></li><{/foreach}></ul></td>
+</tr>
+
+  <{if $block.CATNUM >= 4}>
+  <tr>
+  <td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold"><{$block.category3}></td><td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold;"><{$block.category4}></td>
+  </tr>
+  <tr>
+  <td><{$block.image3}><ul><{foreach item=news4 from=$block.stories4}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news4.storyid}>"><{$news4.newstitle}></a> <{$news4.posttime}><br><br></li><{/foreach}></ul></td>
+  <td><{$block.image4}><ul><{foreach item=news5 from=$block.stories5}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news5.storyid}>"><{$news5.newstitle}></a> <{$news5.posttime}><br><br></li><{/foreach}></ul></td>
+  </tr>
+  
+      <{if $block.CATNUM >= 6}>
+      <tr>
+      <td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold"><{$block.category5}></td><td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold;"><{$block.category6}></td>
+      </tr>
+      <tr>
+      <td><{$block.image5}><ul><{foreach item=news6 from=$block.stories6}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news6.storyid}>"><{$news6.newstitle}></a> <{$news6.posttime}><br><br></li><{/foreach}></ul></td>
+      <td><{$block.image6}><ul><{foreach item=news7 from=$block.stories7}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news7.storyid}>"><{$news7.newstitle}></a> <{$news7.posttime}><br><br></li><{/foreach}></ul></td>
+      </tr>
+      
+          <{if $block.CATNUM >= 8}>
+          <tr>
+          <td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold"><{$block.category7}></td><td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold;"><{$block.category8}></td>
+          </tr>
+          <tr>
+          <td><{$block.image7}><ul><{foreach item=news8 from=$block.stories8}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news8.storyid}>"><{$news8.newstitle}></a> <{$news8.posttime}><br><br></li><{/foreach}></ul></td>
+          <td><{$block.image8}><ul><{foreach item=news9 from=$block.stories9}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news9.storyid}>"><{$news9.newstitle}></a> <{$news9.posttime}><br><br></li><{/foreach}></ul></td>
+          </tr>
+          
+              <{if $block.CATNUM >= 10}>
+              <tr>
+              <td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold"><{$block.category9}></td><td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold;"><{$block.category10}></td>
+              </tr>
+              <tr>
+              <td><{$block.image9}><ul><{foreach item=news10 from=$block.stories10}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news10.storyid}>"><{$news10.newstitle}></a> <{$news10.posttime}><br><br></li><{/foreach}></ul></td>
+              <td><{$block.image10}><ul><{foreach item=news11 from=$block.stories11}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news11.storyid}>"><{$news11.newstitle}></a> <{$news11.posttime}><br><br></li><{/foreach}></ul></td>
+              </tr>
+              
+                  <{if $block.CATNUM == 12}>
+                  <tr>
+                  <td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold"><{$block.category11}></td><td style="width: 50%; padding: 2px; border: 1px solid #999999; background-color: transparent; font-weight: bold;"><{$block.category12}></td>
+                  </tr>
+                  <tr>
+                  <td><{$block.image11}><ul><{foreach item=news12 from=$block.stories12}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news12.storyid}>"><{$news12.newstitle}></a> <{$news12.posttime}><br><br></li><{/foreach}></ul></td>
+                  <td><{$block.image12}><ul><{foreach item=news13 from=$block.stories13}><li><a href="<{$xoops_url}>/modules/news/article.php?storyid=<{$news13.storyid}>"><{$news13.newstitle}></a> <{$news13.posttime}><br><br></li><{/foreach}></ul></td>
+                  </tr>
+                  <{/if}>
+              <{/if}>
+          <{/if}>
+      <{/if}>
+  <{/if}>
+
+</table>
+</td>
+<tr>
+</table>
